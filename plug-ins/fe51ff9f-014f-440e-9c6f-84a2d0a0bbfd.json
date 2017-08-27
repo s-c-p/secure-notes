@@ -1,0 +1,27 @@
+// this is sample only, this is a picture of the final product I want
+// so I can program program accordingly
+
+{
+	"plugin_type": "backup",
+	"plugin_details": {
+		"backup_type": "vcs",
+		"backup_executable": "/usr/bin/git",
+		"cli": {
+			"new_file": [
+				[ "git add \"", "**path_rel_to_repo", "\"" ],
+				[ "git commit -m \"", "**commit_msg", "\"" ]
+			],
+			"update_file": [
+				[ "git stage \"", "**path_rel_to_repo", "\"" ],
+				[ "git commit -m \"", "**commit_msg", "\"" ]
+			],
+			"delete_file": [
+				[ "git rm \"", "**path_rel_to_repo", "\"" ],
+				[ "git commit -m \"", "**commit_msg", "\"" ]
+			],
+			"upload": [
+				[ "git push origin master" ]
+			]
+		}
+	}
+}

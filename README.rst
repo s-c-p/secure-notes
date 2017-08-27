@@ -11,6 +11,8 @@ securely.
 Plug-in Architecture:
 ~~~~~~~~~~~~~~~~~~~~~
 
+Following plug-in types are supported by this app
+
 ux
   this makes the project really ambitious and forces me to think with more
   abstraction. `ux` plug-in will handle, well user experience stuff
@@ -30,13 +32,17 @@ crypto-transfer
 backup-transfer
   to migrate entire repo from one backup client to another
 
+The necessary details of each plug-in, including its own type, are stored in
+individual files inside ``./plug-ins/`` and the file names are uuid(s)
+generated at runtime.
+
 
 Usage:
 ~~~~~~
 
 ::
 
-    py secure-notes.py -h
+    python3.6 secure-notes.py -h
 
 
 Don't copy.

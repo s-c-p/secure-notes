@@ -1,0 +1,32 @@
+// this is sample only, this is a picture of the final product I want
+// so I can program program accordingly
+
+{
+	"plugin_type": "crypto",
+	"plugin_details": {
+		"crypto_type": "symmetric",
+		"crypto_executable": "/usr/bin/openssl",
+		"cli": {
+			"encrypt": [[
+				"openssl ",
+				"enc -e -aes-256-cbc -salt -base64 -in \"",
+				"**file_to_enc",
+				"\" -out \"",
+				"**file_to_dec",
+				"\" -k \"",
+				"**password",
+				"\""
+			]],
+			"decrypt": [[
+				"openssl ",
+				"enc -d -aes-256-cbc -salt -base64 -in \"",
+				"**encrypted_file",
+				"\" -out \"",
+				"**plain_txt_output",
+				"\" -k \"",
+				"**password",
+				"\""
+			]]
+		}
+	}
+}
