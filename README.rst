@@ -11,6 +11,10 @@ securely.
 Plug-in Architecture:
 ~~~~~~~~~~~~~~~~~~~~~
 
+!!change!!
+plug-in should expose a set of methods and return some stuff, details
+contained in .plugin file and code contained in respective .py file
+
 Following plug-in types are supported by this app
 
 ux
@@ -21,6 +25,7 @@ crypto
   know path of ``crypto_executable`` and know the ``encryption_string``,
   ``decryption_string`` and their associated variables for a given 
   ``crypto_executable``
+  currently only symmetric chipher are supported (for verification reasons)
 
 backup
   know path of ``backup_executable`` and know the ``backup_string`` and its
